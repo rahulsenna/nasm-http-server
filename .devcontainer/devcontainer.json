@@ -1,0 +1,32 @@
+{
+    "name": "Assembly Dev Env",
+    "build": {
+        "dockerfile": "../Dockerfile",
+        "context": ".."
+    },
+    "runArgs": ["--cap-add=SYS_PTRACE", "--privileged", "--security-opt", "seccomp=unconfined"],
+    "workspaceFolder": "/app",
+    "mounts": [
+      "source=${localWorkspaceFolder},target=/app,type=bind"
+    ],
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-vscode.cpptools",
+                // "dan-c-underwood.arm",
+                "LucianIrsigler.nasm",
+                "rahulsinha.modalkeys",
+                "ryuta46.multi-command",
+                "rahulsinha.postfixer",
+                "rahulsinha.vscode-quick-select-personal",
+                "ms-vscode.remote-explorer",
+                "ms-vscode-remote.remote-ssh-edit",
+                "ionutvmi.path-autocomplete",
+                "mcu-debug.memory-view"
+
+          
+
+            ]
+        }
+    }
+}
