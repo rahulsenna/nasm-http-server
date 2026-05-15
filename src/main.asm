@@ -161,7 +161,7 @@ handle_client:
     mov edx, req_buf_len
     syscall
 
-    ; cmp byte [rsi + 5], ' '
+    cmp byte [rsi + 5], ' '
 
     
   ; write(client_fd, response, response_len)

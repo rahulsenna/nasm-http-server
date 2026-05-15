@@ -4,11 +4,10 @@
         "dockerfile": "../Dockerfile",
         "context": ".."
     },
+    "remoteEnv": { "DEBUGINFOD_URLS": "" },
     "runArgs": ["--cap-add=SYS_PTRACE", "--privileged", "--security-opt", "seccomp=unconfined"],
-    "workspaceFolder": "/app",
-    "mounts": [
-      "source=${localWorkspaceFolder},target=/app,type=bind"
-    ],
+    "workspaceFolder": "/workspaces/nasm-http-server",
+    // "mounts": [ "source=${localWorkspaceFolder},target=/app,type=bind" ],
     "customizations": {
         "vscode": {
             "extensions": [

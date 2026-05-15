@@ -5,16 +5,24 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "(gdb) Launch",
+      "name": "GDB",
       "type": "cppdbg",
       "request": "launch",
       "program": "${workspaceFolder}/build/http-server",
       "args": [],
-      "stopAtEntry": false,
+      "stopAtEntry": true,
       "cwd": "${workspaceFolder}/build/",
       "environment": [],
       "externalConsole": false,
+      "presentation": {
+        "hidden": false,
+        "group": "",
+        "order": 1
+      },
+      
+      
       "MIMode": "gdb",
+      "miDebuggerPath": "/usr/bin/gdb",
       "setupCommands": [
           {
               "description": "Enable pretty-printing for gdb",
